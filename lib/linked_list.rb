@@ -35,7 +35,23 @@ class LinkedList
   end 
 
   def to_string 
-    
+    #string is equal to ""
+    #unless head.nil? string is equal to @head.data.to_s
+    #node is equal to @head
+    #until node.next_node.nil?
+    #string = string + ' ' + node.next_node.data.to_s
+
+    string = ""
+    unless head.nil? 
+      string = @head.data.to_s 
+      node = @head 
+      until node.next_node.nil? 
+        string = string + ' ' + node.next_node.data.to_s 
+        node = node.next_node 
+      end
+    end
+
+    string 
   end
 
 
