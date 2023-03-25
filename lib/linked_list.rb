@@ -5,7 +5,7 @@ class LinkedList
   end
 
   def append(data)
-    if @head.nil?
+    if @head == nil
       @head = Node.new(data)
     else 
       @head.add_next_node(data)
