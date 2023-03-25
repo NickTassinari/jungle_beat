@@ -34,9 +34,16 @@ RSpec.describe LinkedList do
   it 'has to string method' do 
     list = LinkedList.new 
     list.append("doop")
-    require 'pry'; binding.pry
-    
+
     expect(list.to_string).to eq("doop")
+  end
+
+  it 'can append more strings' do 
+    list = LinkedList.new 
+    list.append("doop")
+    list.append("deep")
+
+    expect(list.to_string).to eq("doop deep")
   end
 
 end
