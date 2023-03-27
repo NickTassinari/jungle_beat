@@ -103,8 +103,25 @@ class LinkedList
     end
     found.to_s.strip
   end
+  
+  
   def pop 
+    if @head == nil 
+      popped = ''
+    elsif @head.next_node.nil? 
+      popped = @head.data 
+      @head = nil 
+       
+    else 
+      node = @head 
+      until node.next_node.next_node.nil? 
+        node = node.next_node 
+      end
 
+      popped = node.next_node.data 
+      node.next_node = nil 
+    end
+    popped 
   end
 
   def includes?
