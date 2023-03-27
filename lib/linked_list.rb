@@ -81,6 +81,17 @@ class LinkedList
     end
   end
 
+  def find(position, number_of_elements)
+    count = 0
+    current_node = @head 
+    until count == position
+      count += 1 
+      current_node = current_node.next_node 
+    end
+    collection(number_of_elements, current_node)
+end
+
+
 
   
 end
