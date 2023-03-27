@@ -124,8 +124,15 @@ class LinkedList
     popped 
   end
 
-  def includes?
+  def includes?(data)
+    node = @head 
+    return true if node.data == data 
 
+    until node.next_node.nil? 
+      return true if node.next_node.data == data
+      node = node.next_node
+    end
+    false 
   end
 
 

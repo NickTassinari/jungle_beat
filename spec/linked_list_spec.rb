@@ -87,4 +87,15 @@ RSpec.describe LinkedList do
 
     expect(list.pop).to eq("woo")
   end
+
+  it 'has an includes? method' do 
+    list = LinkedList.new
+    list.append('doop')
+    list.append('shu')
+    list.append('shi')
+    list.append('woo')
+
+    expect(list.includes?('shu')).to eq(true)
+    expect(list.includes?('yip')).to eq(false)
+  end
 end
