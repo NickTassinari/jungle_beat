@@ -78,4 +78,13 @@ RSpec.describe LinkedList do
 
     expect(list.find(2, 1)).to eq("shi")
   end
+
+  it 'has pop method' do 
+    list = LinkedList.new 
+    list.append("shu")
+    list.append("shi")
+    list.append("woo")
+
+    expect(list.pop).to eq("woo")
+  end
 end
