@@ -89,7 +89,28 @@ class LinkedList
       current_node = current_node.next_node 
     end
     collection(number_of_elements, current_node)
-end
+  end
+
+
+  def collection(number_of_elements, current_node)
+    found = ""
+    count = 0
+    until count == number_of_elements
+      break if current_node.nil? 
+      count += 1
+      found << current_node.data + " "
+      current_node = current_node.next_node 
+    end
+    found.to_s.strip
+  end
+  def pop 
+
+  end
+
+  def includes?
+
+  end
+
 
 
 
